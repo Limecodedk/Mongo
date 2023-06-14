@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 require('dotenv').config()
 const PORT = process.env.PORT
 
@@ -15,6 +16,7 @@ db.once('open', () => console.log("///---> Så er der hul igennem til databasen"
 
 //APP
 //--------------------------------
+app.use(cors())
 app.use(express.json()) //Håndter POST/PUT/PATCH hvor data er json
 app.use(express.urlencoded({ extended: true })) //Håndter POST/PUT/PATCH hvor data URLencoded
 
