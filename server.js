@@ -17,8 +17,10 @@ db.once('open', () => console.log("///---> Så er der hul igennem til databasen"
 //APP
 //--------------------------------
 app.use(cors())
+app.use(express.static('public')) //Adgang til statisk fil udefra sendes ind i public mappen
 app.use(express.json()) //Håndter POST/PUT/PATCH hvor data er json
 app.use(express.urlencoded({ extended: true })) //Håndter POST/PUT/PATCH hvor data URLencoded
+
 
 //Må ikke ligge her mere da den konflikter med Multer. Er flyttet til todos.routes.js
 /* const formData = require('express-form-data')//Håndter POST/PUT/PATCH hvor data Multioartfom
