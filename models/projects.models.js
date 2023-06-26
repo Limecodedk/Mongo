@@ -23,4 +23,4 @@ const projectsSchema = new mongoose.Schema({
 
 
 
-module.exports = mongoose.model('Analytics', analyticsSchema, 'analytics')
+module.exports = mongoose.model('Projects', analyticsSchema, 'projects')

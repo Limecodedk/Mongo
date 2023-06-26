@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 //Modellen for en Projekter
-const Projects = require('../models/projecets.models')
+const Projects = require('../models/projects.models')
 
 //----Multer til upload af filer/billeder
 //---------------------------------------
