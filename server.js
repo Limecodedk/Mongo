@@ -40,6 +40,7 @@ app.get('/', async (req, res) => {
 app.use('/todos', require('./routes/todos.routes')) //endpoint todos
 app.use('/reviews', require('./routes/reviews.routes')) //endpoint todos
 app.use('/analytics', require('./routes/analytics.routes')) //endpoint analytics
+app.use('/projects', require('./routes/project.routes')) //endpoint project
 
 //No MATCH
 //------
